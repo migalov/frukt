@@ -1,0 +1,33 @@
+.product-cart {
+  @apply flex flex-col items-center px-[15px];
+  & h3 {
+    @apply text-[20px] font-semibold mb-[10px];
+  }
+}
+
+.product-cart__image {
+  @apply px-[60px] pt-[60px];
+
+  & img {
+    @apply mb-5
+  }
+}
+
+.product-cart__cur-for-kg {
+  @apply opacity-80 text-[15px];
+}
+
+.product-cart__price {
+  @apply text-[30px] font-bold mb-[15px]
+}
+
+.cart-btns {
+  @apply flex items-center gap-4   px-[20px] py-[10px];
+  & > div {
+    @apply bg-[#F28123] rounded-3xl p-3 text-white cursor-pointer;
+
+    &:hover {
+      @apply text-black
+    }
+  }
+}

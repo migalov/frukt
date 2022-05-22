@@ -33,3 +33,25 @@ h6, .h6 {
   margin: 0 0 1.25rem 0;
   color: #051922;
 }
+
+.overlay {
+  @apply absolute left-0 top-0 w-full h-full bg-[rgba(0,0,0,.4)] z-10;
+}
+.drawer {
+  @apply absolute right-0 w-[385px] h-full bg-white p-[30px];
+
+  & h2 {
+    @apply text-3xl
+  }
+}
+
+.cart-item {
+  @apply flex justify-between items-center
+}
+
+.cart-overlay-bottom__btn {
+  
+  & > div {
+    @apply w-full justify-center;
+  }
+}

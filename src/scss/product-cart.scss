@@ -3,6 +3,10 @@
   & h3 {
     @apply text-[20px] font-semibold mb-[10px];
   }
+  
+  &:hover {
+    @apply shadow-2xl;
+  }
 }
 
 .product-cart__image {
@@ -24,10 +28,10 @@
 .cart-btns {
   @apply flex items-center gap-4   px-[20px] py-[10px];
   & > div {
-    @apply bg-[#F28123] rounded-3xl p-3 text-white cursor-pointer;
+    @apply flex gap-2 items-center bg-[#F28123] rounded-3xl p-3 text-white cursor-pointer;
 
     &:hover {
-      @apply text-black
+      @apply bg-black text-[#F28123]
     }
   }
 }

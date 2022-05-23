@@ -2,7 +2,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { IoIosCloseCircle } from 'react-icons/io';
 import CartItem from './CartItem';
 
-export default ({onClose, fruits = [] }) => {
+export default ({onClose, onRemove, fruits = [] }) => {
   return(
     <div className="overlay">
       <div className="drawer">
@@ -12,6 +12,7 @@ export default ({onClose, fruits = [] }) => {
           {
             fruits.map((obj, key) =>
               <CartItem
+                onRemove={() => onRemove(obj.code)}
                 key={key}
                 name={obj.name}
                 image={obj.image}

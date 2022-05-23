@@ -4,12 +4,12 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { MdFavorite } from "react-icons/md";
 
 
-export default ({ name, image, price, addToFavourite, addToCart }) => {
+export default ({ code, name, image, price, addToFavourite, addToCart }) => {
 
   const [isAdded, setIsAdded] = useState(false);
 
   const onClickAddCart = () => {
-    addToCart({ name, image, price });
+    addToCart({ code, name, image, price });
     setIsAdded(!isAdded);
   }
 
@@ -28,7 +28,7 @@ export default ({ name, image, price, addToFavourite, addToCart }) => {
       <span className="product-cart__cur-for-kg">Per Kg</span>
       <span className="product-cart__price">{price}$</span>
       <div href="#" className="cart-btns">
-        <div onClick={onClickAddCart} className={isAdded ? 'border-4 border-[#ff0000]': '' }>
+        <div onClick={onClickAddCart} data-code={code} className={isAdded ? 'border-4 border-[#ff0000]': '' }>
           <FaShoppingCart />
         </div>
         <div onClick={addToFavourite}>
